@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Overriding Bootstrap Font */
+:root {
+  --bs-body-font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+/* Safe override for body and all text */
+header{
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+nav{
+    background-color: black;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+  background-color: black;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.4rem !important; /* or 18px or whatever you like */
+  }
+
+
+.navbar-brand img {
+  height: 65px;
+  display: block;
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  .navbar-brand img {
+    height: 55px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Mobiles (below 768px) */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 45px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem !important;
+  }
+}

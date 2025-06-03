@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "mongoose": "^8.15.1"
+  },
+  "name": "dhirah-serverless",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Dhirah: The Spiritual Society",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

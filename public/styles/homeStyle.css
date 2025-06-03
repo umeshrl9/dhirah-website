@@ -1,0 +1,495 @@
+body {
+    background-color: black !important;
+    padding-top: 70px;
+    /*For the fixed nav */
+}
+
+* {
+    font-family: "IBM Plex Sans Condensed" !important;
+}
+
+.not-found-heading {
+    color: white !important;
+    font-family: "Liter", sans-serif !important;
+    text-align: left;
+    font-weight: bold !important;
+    font-size: 600%;
+}
+
+.success-a {
+    font-family: "IBM Plex Sans Condensed", sans-serif !important;
+    font-weight: bold !important;
+}
+
+.banner-text {
+    font-family: "IBM Plex Sans Condensed", sans-serif !important;
+    margin-top: 3.5%;
+}
+
+.banner-box {
+    background-color: #ffc600;
+    font-size: 75px;
+    letter-spacing: 10px;
+}
+
+/*Image Marquee Slider */
+
+.images-hero {
+    overflow: hidden;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    position: relative;
+    width: 100%;
+    /* Remove white-space nowrap since we'll use flex */
+}
+
+.images-slide-wrapper {
+    display: flex;
+    width: max-content;
+    /* width depends on content */
+    animation: slide 20s linear infinite;
+}
+
+.images-slide {
+    display: flex;
+}
+
+.images-slide img {
+    height: 300px;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+/* Shadow effect remains same */
+.images-hero:before,
+.images-hero:after {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    content: "";
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.images-hero:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+}
+
+.images-hero:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        /* Move left by width of one .images-slide */
+        transform: translateX(-50%);
+    }
+}
+
+.main-hero {
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    color: white !important;
+}
+
+.tag-heading {
+    color: white;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.who-we-are-section h5 {
+    color: #ffc600 !important;
+    font-weight: bold;
+}
+
+.who-we-are-section img {
+    width: 90%;
+}
+
+.who-we-are-section {
+    padding: 60px 20px;
+    font-weight: bold;
+}
+
+.who-we-are-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffc600 !important;
+}
+
+.icon-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.icon-box i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.who-image {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 30px #32e0c4;
+}
+
+.who-image2 {
+    max-width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 30px #ffffff;
+}
+
+.logo-container {
+    background-color: #121212;
+    border-radius: 20px;
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    margin: 0 10px;
+}
+
+.logo-bar {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.logo-bar img {
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+}
+
+.colleges-container {
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.marquee1 {
+    margin-left: 0;
+}
+
+.marquee2 {
+    margin-left: -50px;
+}
+
+.marquee3 {
+    margin-left: -50px;
+    /* shift left */
+}
+
+.marquee2 .images-slide-wrapper {
+    animation-direction: reverse;
+}
+
+.colleges-container:before,
+.colleges-container:after {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    content: "";
+    opacity: 0.5;
+    z-index: 2;
+}
+
+.colleges-container:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+}
+
+.colleges-container:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+
+.subbanner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sub-hero h2 {
+    font-size: 3rem;
+}
+
+.sub-hero h2 {
+    font-weight: bold;
+}
+
+.sub-hero p {
+    font-size: large;
+}
+
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-section {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+.testimonial-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 60px;
+    border: 2px solid #18c9e6;
+    border-radius: 1rem;
+    text-align: justify;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 80px;
+    color: #18c9e6;
+    font-family: "Playfair Display", sans-serif;
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.testimonial-role {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fb2576 !important;
+}
+
+/* Media query for screens 768px and smaller */
+@media screen and (max-width: 900px) {
+    .not-found-heading {
+        font-size: 300%;
+        /* Reduce font size to half */
+    }
+
+    .banner-box {
+        font-size: 50px;
+    }
+
+    .who-we-are-section img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .banner-box {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .banner-text {
+        margin-top: 0;
+    }
+
+    .tag-heading {
+        font-size: 1.3rem;
+    }
+
+    .who-we-are-section {
+        padding: 40px 20px;
+    }
+
+    .images-hero:before,
+    .images-hero:after {
+        width: 5%;
+    }
+
+    .logo-container {
+        width: 180px;
+        padding: 15px;
+        margin: 0 5px;
+    }
+
+    .logo-bar {
+        padding: 10px 0;
+    }
+
+    .logo-bar img {
+        width: 90px;
+    }
+
+    .sub-hero img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  .testimonial-card::before {
+    display: none;
+  }
+}
+
+/* Small phones (up to 320px) */
+@media (max-width: 320px) {
+  .testimonial-section {
+    padding: 40px 10px;
+  }
+
+  .testimonial-card {
+    padding: 20px 15px;
+    max-width: 100%;
+  }
+
+  .testimonial-card::before {
+    font-size: 50px;
+    top: 5px;
+    left: 10px;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .testimonial-img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+
+  .testimonial-role {
+    font-size: 0.85rem;
+  }
+}
+
+/* Medium phones (321px to 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+  .testimonial-section {
+    padding: 45px 15px;
+  }
+
+  .testimonial-card {
+    padding: 25px 20px;
+    max-width: 90%;
+  }
+
+  .testimonial-card::before {
+    font-size: 60px;
+    top: 7px;
+    left: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+
+  .testimonial-img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 9px;
+  }
+
+  .testimonial-name {
+    font-size: 1.05rem;
+  }
+
+  .testimonial-role {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large phones / Small tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .testimonial-section {
+    padding: 50px 20px;
+  }
+
+  .testimonial-card {
+    padding: 30px 40px;
+    max-width: 700px;
+  }
+
+  .testimonial-card::before {
+    font-size: 70px;
+    top: 8px;
+    left: 18px;
+  }
+
+  .testimonial-text {
+    font-size: 1.03rem;
+    margin-bottom: 28px;
+    line-height: 1.65;
+  }
+
+  .testimonial-img {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 9px;
+  }
+
+  .testimonial-name {
+    font-size: 1.08rem;
+  }
+
+  .testimonial-role {
+    font-size: 0.93rem;
+  }
+}

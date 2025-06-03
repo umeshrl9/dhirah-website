@@ -1,0 +1,32 @@
+.footer-custom {
+  background-color: #000;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.social-icon {
+  font-size: 40px;
+  color: #ffff;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #f3eb54, 0 0 10px #ed7777;
+}
+
+
+
+/* To implement sticky footer i.e. at bottom when not enough content*/
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+

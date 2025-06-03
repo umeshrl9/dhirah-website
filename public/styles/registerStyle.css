@@ -1,0 +1,63 @@
+.register-main{
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+
+.register-main h1{
+    color: white;
+    font-weight: bold;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card {
+    width: 18rem;
+    margin: 0 auto;
+}
+
+
+.card a{
+    font-weight: bold !important;
+    margin-top: 10px;
+}
+
+/* GPT Styling*/
+.custom-card {
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 1); /* brighter, always visible shadow */
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(248, 233, 26, 1); /* extra glow on hover */
+}
+
+.custom-card img {
+  height: 150px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.custom-card:hover img {
+  filter: brightness(95%);
+}
+
+.custom-card .btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(166, 0, 255, 0.4);
+}
+
+/* For mobile and tablets */
+@media (max-width: 768px) {
+    .col {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
