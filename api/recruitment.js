@@ -65,10 +65,12 @@ export default async function handler(req, res) {
 
       await newUser.save();
 
-      res.status(201).json({ message: "Application submitted successfully!" });
+      res.writeHead(302, { Location: "/success.html" });
+      res.end();
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "Internal server error" });
+      res.writeHead(302, { Location: "/error.html" });
+      res.end();
     }
   } else {
     res.status(405).json({ error: "Method not allowed" });
