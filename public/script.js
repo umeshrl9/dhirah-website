@@ -29,24 +29,24 @@ if (document.querySelector(".mySwiper")) {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+
+    // Remove navigation arrows as requested
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
+
+    freeMode: false,   // disable free mode to enforce snapping to slides
+
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
-    freeMode: false,
-    breakpoints: {
-      0: {
-        freeMode: true,
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-      },
-      769: {
-        freeMode: false,
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-    },
+
+    // Enable grabbing cursor for better UX
+    grabCursor: true,
   });
 }
+
 
 

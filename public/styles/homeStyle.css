@@ -305,10 +305,10 @@ body {
     color: #777;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #fb2576 !important;
+.mySwiper {
+  cursor: pointer !important;      /* cursor changes to pointer on hover */
 }
+
 
 /* Media query for screens 768px and smaller */
 @media screen and (max-width: 900px) {
