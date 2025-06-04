@@ -1,5 +1,16 @@
 {
   "version": 2,
+  "headers": [
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|gif|svg|css|js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
@@ -11,19 +22,6 @@
     },
     {
       "handle": "filesystem"
-    },
-    {
-      "headers": [
-        {
-          "source": "/(.*)\\.(png|jpg|jpeg|gif|svg|css|js)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "public, max-age=31536000, immutable"
-            }
-          ]
-        }
-      ]
     },
     {
       "src": "/.*",
