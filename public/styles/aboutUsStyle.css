@@ -1,0 +1,54 @@
+.about-us-hero-section {
+      position: relative;
+      background: url('/images/filler-2.jpg') center center/cover no-repeat;
+      height: 100vh;
+      color: white;
+    }
+
+    .about-us-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    .about-us-hero-content {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .about-us-hero-content h1 {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+
+    .about-us-hero-content h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: -20px;
+    }
+
+    @media (max-width: 768px) {
+       @media (max-width: 768px) {
+    .about-us-hero-section {
+      height: 400px;
+    }
+    .about-us-hero-content {
+      bottom: 20px;
+    }
+    .about-us-hero-content h1 {
+      font-size: 2.5rem;
+    }
+    .about-us-hero-content h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
