@@ -1,0 +1,101 @@
+.dys-hero-section {
+  color: white;
+  height: 100vh;
+  position: relative;
+}
+
+
+.dys-hero-section img {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+.dys-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.dys-hero-content {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.dys-hero-content h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.dys-hero-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.dys-promo .btn, .dys-hero-2 .btn, .dys-hero-3 .btn {
+  font-weight: bold !important;
+}
+
+.dys-promo p {
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.dys-promo {
+  color: white;
+}
+
+.dys-promo h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.transformational {
+  color: #ffc600;
+}
+
+.images-slide span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dys-promo .images-hero {
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+  .dys-hero-section img {
+    height: 85vh;
+  }
+
+  /* .dys-hero-overlay{
+      height: 400px;
+    } */
+
+  .dys-hero-content h1,
+  .dys-promo h1 {
+    font-size: 2.5rem;
+  }
+
+  .dys-promo .images-hero {
+    margin-top: 10%;
+    margin-bottom: 15%;
+  }
+
+}
