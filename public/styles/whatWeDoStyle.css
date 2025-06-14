@@ -1,0 +1,63 @@
+.what-we-do-hero {
+    color: white;
+}
+
+.highlight {
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 16px;
+    display: block;
+}
+
+.activity-card img {
+  transition: 0.3s ease;
+}
+.activity-card:hover img {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.whats-going-on img{
+    max-height: 350px;
+    width: 100%;
+}
+
+.what-we-do-banner .banner-img-wrapper {
+  height: 600px;
+  overflow: hidden;
+}
+
+.object-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.vertical-heading {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 3rem;
+  font-weight: bold;
+  color: #b7b6a7;
+  letter-spacing: 2px;
+}
+
+.divider-line {
+  width: 1.5px;
+  height: 80px;
+  background-color: #b7b6a7;
+}
+
+
+@media (max-width: 768px) {
+  .what-we-do-banner .banner-img-wrapper {
+    height: 200px;
+  }
+}
