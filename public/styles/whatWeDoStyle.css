@@ -55,6 +55,29 @@
   background-color: #b7b6a7;
 }
 
+.outreach-img {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.outreach-img-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support-text {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .support-text {
+    font-size: 2.4rem;
+  }
+}
+
 
 @media (max-width: 768px) {
   .what-we-do-banner .banner-img-wrapper {
