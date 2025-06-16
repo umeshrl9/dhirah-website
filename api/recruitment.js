@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import LRU from "lru-cache";
 dotenv.config();
 
 
@@ -44,8 +45,26 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
 
+// Setup in-memory rate limiter
+const rateLimitOptions = {
+  max: 5,                  // max 5 requests
+  ttl: 60 * 1000 * 15,          // per 60 seconds
+};
+const rateLimiter = new LRU(rateLimitOptions);
+
 export default async function handler(req, res) {
   await dbConnect();
+
+  const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+
+  // Track requests per IP
+  const current = rateLimiter.get(ip) || 0;
+
+  if (current >= 5) {
+    return res.status(429).json({ message: "Too many requests — please try again later." });
+  }
+
+  rateLimiter.set(ip, current + 1);
 
   if (req.method === "POST") {
     try {
