@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import LRU from "lru-cache";
+import { LRUCache } from "lru-cache";
 dotenv.config();
 
 
@@ -48,9 +48,9 @@ const User = mongoose.models.User || mongoose.model("User", UserSchema);
 // Setup in-memory rate limiter
 const rateLimitOptions = {
   max: 5,                  // max 5 requests
-  ttl: 60 * 1000 * 15,          // per 60 seconds
+  ttl: 60 * 1000 * 15,          // per 15 minutes
 };
-const rateLimiter = new LRU(rateLimitOptions);
+const rateLimiter = new LRUCache(rateLimitOptions);
 
 export default async function handler(req, res) {
   await dbConnect();
