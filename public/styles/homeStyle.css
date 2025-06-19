@@ -329,9 +329,13 @@ body {
 
 
 @media screen and (max-width: 450px) {
-    .banner-box {
-        font-size: 40px;
+    .banner-box.px-5.py-2.bg-dark.text-white.fw-bold.rounded {
+        font-size: 2rem;
+        background-color: black !important;
         text-align: center;
+        padding-top: 2rem !important;
+        padding-left: 10px !important;
+        padding-right: 0 !important;
     }
 
     .banner-text {
