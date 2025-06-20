@@ -177,8 +177,8 @@ body {
 }
 
 .logo-bar img {
-    width: 130px;
-    height: auto;
+    height: 120px;
+    width: auto;
     object-fit: contain;
 }
 
