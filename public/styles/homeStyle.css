@@ -343,6 +343,7 @@ body {
 
     .tag-heading {
         font-size: 1.3rem;
+        color: #ffc600;
     }
 
     .who-we-are-section {
@@ -365,7 +366,7 @@ body {
     }
 
     .logo-bar img {
-        width: 90px;
+        height: 80px;
     }
 
     .sub-hero img {
