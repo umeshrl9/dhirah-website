@@ -47,7 +47,7 @@ body {
     display: flex;
     width: max-content;
     /* width depends on content */
-    animation: slide 20s linear infinite;
+    animation: slide 23s linear infinite;
 }
 
 .images-slide {
@@ -343,7 +343,6 @@ body {
 
     .tag-heading {
         font-size: 1.3rem;
-        color: #ffc600;
     }
 
     .who-we-are-section {
