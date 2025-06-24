@@ -79,6 +79,22 @@
   margin-bottom: 5%;
 }
 
+/*Form*/
+/* White accordion icon and yellow focus border */
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-button:focus {
+  border-color: #ffc600 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 198, 0, 0.25);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #ffc600;
+}
+
+
 @media (max-width: 768px) {
   .dys-hero-section img {
     height: 85vh;
