@@ -80,18 +80,13 @@
 }
 
 /*Form*/
-/* White accordion icon and yellow focus border */
 .accordion-button::after {
   filter: invert(1);
 }
 
+/* On focus: yellow border via box-shadow */
 .accordion-button:focus {
-  border-color: #ffc600 !important;
-  box-shadow: 0 0 0 0.25rem rgba(255, 198, 0, 0.25);
-}
-
-.accordion-button:not(.collapsed) {
-  color: #ffc600;
+  box-shadow: 0 0 0 0.25rem rgba(182, 181, 181, 0.25) !important;
 }
 
 
