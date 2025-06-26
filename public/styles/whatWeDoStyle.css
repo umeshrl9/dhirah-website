@@ -16,6 +16,19 @@
     display: block;
 }
 
+.activity-card {
+  height: 350px; /* or whatever you like */
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .activity-card img {
   transition: 0.3s ease;
 }
