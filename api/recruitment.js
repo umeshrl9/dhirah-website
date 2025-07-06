@@ -84,11 +84,11 @@ export default async function handler(req, res) {
 
       await newUser.save();
 
-      res.writeHead(302, { Location: "/success.html" });
+      res.writeHead(302, { Location: "/success" });
       res.end();
     } catch (error) {
       console.error(error);
-      res.writeHead(302, { Location: "/error.html" });
+      res.writeHead(302, { Location: "/error" });
       res.end();
     }
   } else {
