@@ -282,6 +282,16 @@ body {
     font-family: "Playfair Display", sans-serif;
 }
 
+.blue-quote .testimonial-card::before {
+    content: "“";
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    font-size: 200px;
+    color: #59ccdd;
+    font-family: "Playfair Display", sans-serif;
+}
+
 .testimonial-text {
     font-size: 1.05rem;
     color: #555;
