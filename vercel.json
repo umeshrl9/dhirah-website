@@ -2,6 +2,9 @@
   "version": 2,
   "routes": [
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "/api/$1.js"
     },
@@ -10,12 +13,10 @@
       "dest": "/$1"
     },
     {
-      "handle": "filesystem"
-    },
-    {
       "src": "/.*",
       "status": 404,
       "dest": "/404"
     }
-  ]
+  ],
+  "trailingSlash": false
 }
