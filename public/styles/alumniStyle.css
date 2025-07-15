@@ -292,3 +292,10 @@ body {
     font-size: 1rem;
   }
 } */
+
+/* navbar fix */
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
