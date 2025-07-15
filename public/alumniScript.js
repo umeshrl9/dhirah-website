@@ -72,15 +72,15 @@ const alumniData = [
       "Dhirah has been my spiritual anchor. It gifted me a family of genuine friends and a purpose rooted in timeless wisdom.",
     img: "images/alumniImages/ParthPrji.jpg",
   },
-  {
-    name: "Vikrami Raghav",
-    batch: "2024",
-    role: "Rastriya Ispat Nigam Limited Visakhapatnam",
-    quote: "My soul found direction",
-    testimonial:
-      "Dhirah gave me the strength to remain humble and peaceful even in the face of big responsibilities. It offered not just mere association but true friendships and life lessons rooted in ancient wisdom of the Bhagavad Gita.",
-    img: "images/alumniImages/VikramiRaghavPrji.jpg",
-  },
+  // {
+  //   name: "Vikrami Raghav",
+  //   batch: "2024",
+  //   role: "Rastriya Ispat Nigam Limited Visakhapatnam",
+  //   quote: "My soul found direction",
+  //   testimonial:
+  //     "Dhirah gave me the strength to remain humble and peaceful even in the face of big responsibilities. It offered not just mere association but true friendships and life lessons rooted in ancient wisdom of the Bhagavad Gita.",
+  //   img: "images/alumniImages/VikramiRaghavPrji.jpg",
+  // },
   {
     name: "Gaurav Kumar",
     batch: "2025",
