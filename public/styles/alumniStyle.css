@@ -213,7 +213,7 @@ body {
 }
 
 /* Group photo & quote */
-.group-photo-wrapper {
+/* .group-photo-wrapper {
   position: relative;
   width: 100%;
   display: inline-block;
@@ -223,14 +223,14 @@ body {
   width: 100%;
   height: auto;
   display: block;
-}
+} */
 
-.photo-quote-overlay {
+/* .photo-quote-overlay {
   position: absolute;
-  top: 10%; /* Push it slightly down from the top*/
+  top: 10%; Push it slightly down from the top
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5); /* Black box only around text */
+  background: rgba(0, 0, 0, 0.5); Black box only around text
   padding: 0.8rem 1.2rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -246,7 +246,7 @@ body {
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   line-height: 1.4;
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -259,7 +259,7 @@ body {
     height: 120px;
   }
 }
-
+/* 
 @media (min-width: 600px) and (max-width: 1024px) {
   .photo-quote-overlay {
     max-width: 80%;
@@ -291,4 +291,4 @@ body {
   .photo-quote-text {
     font-size: 1rem;
   }
-}
+} */
