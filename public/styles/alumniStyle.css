@@ -271,11 +271,6 @@ body {
     font-size: 1.6rem;
   }
 }
-nav.scrolled {
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
 
 @media (max-width: 599px) {
   .photo-quote-overlay {
