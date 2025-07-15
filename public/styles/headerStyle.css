@@ -1,22 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* Overriding Bootstrap Font */
 :root {
-  --bs-body-font-family: 'IBM Plex Sans Condensed', sans-serif;
+  --bs-body-font-family: "IBM Plex Sans Condensed", sans-serif;
 }
 
 /* Safe override for body and all text */
-header{
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
+header {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
 }
 
-nav{
-    background-color: black;
-    font-weight: bold;
-    color: white;
+nav {
+  background-color: black;
+  font-weight: bold;
+  color: white;
 }
 
 nav {
@@ -27,13 +27,12 @@ nav {
 nav.scrolled {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(8px);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-nav .nav-link {
-    font-size: 1.4rem !important; /* or 18px or whatever you like */
-  }
-
+  font-size: 1.4rem !important; /* or 18px or whatever you like */
+}
 
 .navbar-brand img {
   height: 65px;
@@ -46,7 +45,7 @@ nav.scrolled {
   outline: none !important;
 }
 
-.navbar-toggler:focus, 
+.navbar-toggler:focus,
 .navbar-toggler:active {
   border: none !important;
   box-shadow: none !important;
