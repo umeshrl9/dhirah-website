@@ -37,7 +37,7 @@ const FTSSRegistrationSchema = new mongoose.Schema({
   phone: String,
   college: {
     type: String,
-    enum: ["NSUT", "DDUC", "ARSD"],
+    enum: ["NSUT", "DDUC", "ARSD", "IIT Roorkee", "IIT Delhi", "RLA", "Bhaskaracharya", "Aryabhatta", "VMMC"],
   },
 });
 
