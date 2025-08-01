@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { LRUCache } from "lru-cache";
 dotenv.config();
 
 
@@ -43,25 +42,9 @@ const DYSRegistrationSchema = new mongoose.Schema({
 
 const DYSRegistration = mongoose.models.DYSRegistration || mongoose.model("DYSRegistration", DYSRegistrationSchema);
 
-// Setup in-memory rate limiter
-const rateLimitOptions = {
-  max: 5,                  // max 5 requests
-  ttl: 60 * 1000 * 15,          // per 15 minutes
-};
-const rateLimiter = new LRUCache(rateLimitOptions);
-
 //API handler function
 export default async function handler(req, res) {
     await dbConnect();
-    const ip = req.headers["x-forwarderd-for"] || req.socket.remoteAddress;
-
-    const current = rateLimiter.get(ip) || 0;
-
-    if(current >= 5){
-        return res.status(529).json({message: "Too many requests -- please try again later"});
-    }
-
-    rateLimiter.set(ip, current+1);
 
     if (req.method === "POST") {
     try {
