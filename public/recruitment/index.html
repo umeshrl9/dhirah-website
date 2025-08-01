@@ -321,6 +321,22 @@
         }
       });
     </script>
+    <script>
+    const form = document.querySelector("form");
+    const submitBtn = form.querySelector("button[type='submit']");
+
+    form.addEventListener("submit", (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+        form.classList.add("was-validated");
+        return;
+      }
+      // Disable the submit button to prevent multiple clicks
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Submitting...";
+    });
+  </script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script.js"></script>
   </body>
