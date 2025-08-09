@@ -38,6 +38,10 @@ const DYSRegistrationSchema = new mongoose.Schema({
     type: String,
     enum: ["NSUT", "DDUC", "ARSD", "IIT Roorkee", "IIT Delhi", "RLA", "Bhaskaracharya", "Aryabhatta", "VMMC"],
   },
+  h_ds: {
+    type: String,
+    enum: ["Hosteller", "Day Scholar"],
+  },
 });
 
 const DYSRegistration = mongoose.models.DYSRegistration || mongoose.model("DYSRegistration", DYSRegistrationSchema);
@@ -48,7 +52,7 @@ export default async function handler(req, res) {
 
     if (req.method === "POST") {
     try {
-      const { name, rollno, year, branch, dob, phone, college } = req.body;
+      const { name, rollno, year, branch, dob, phone, college, h_ds } = req.body;
 
       const newRegistration = new DYSRegistration({
         name,
@@ -58,6 +62,7 @@ export default async function handler(req, res) {
         dob,
         phone,
         college,
+        h_ds
       });
 
       await newRegistration.save();
