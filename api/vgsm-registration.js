@@ -35,8 +35,7 @@ const VGSMRegistrationSchema = new mongoose.Schema({
   phone: String,
   role: String,
   skills: String,
-  portfolio: String,
-  motivation: String
+  portfolio: String
 });
 
 const VGSMRegistration = mongoose.models.VGSMRegistration || mongoose.model("VGSMRegistration", VGSMRegistrationSchema);
@@ -54,7 +53,7 @@ export default async function handler(req, res) {
 
     if (req.method === "POST") {
     try {
-      const { name, rollno, year, branch, phone, role, skills, portfolio, motivation } = req.body;
+      const { name, rollno, year, branch, phone, role, skills, portfolio} = req.body;
 
       const newRegistration = new VGSMRegistration({
         name,
@@ -64,8 +63,7 @@ export default async function handler(req, res) {
         phone,
         role,
         skills,
-        portfolio,
-        motivation
+        portfolio
       });
 
       await newRegistration.save();
