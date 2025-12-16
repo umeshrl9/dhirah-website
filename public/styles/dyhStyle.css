@@ -30,3 +30,14 @@ html, body {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+.dyh-features-section {
+  background-color: #fdf8e6;
+}
+
+.dyh-features-section .feature-icon {
+  width: 64px;
+  height: 64px;
+  background-color: #ffc600;
+  color: #1c1c1c;
+}
