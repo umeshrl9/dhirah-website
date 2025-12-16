@@ -1,33 +1,6 @@
 // Alumni Data.
 const alumniData = [
   {
-    name: "Chandan Sharma",
-    batch: "2020",
-    role: "Physicswallah",
-    quote: "Guided by discipline",
-    testimonial:
-      "Dhirah had been an integral part of my family. The amount of selfless love and care I received is really fascinating but not only that I got opportunity to learn and meet exciting personalities. \nDhirah gave me a platform to learn and share the wisdom of bhagavad gita. It gave me a boost in self confidence and simultaneously I discovered the areas of improvement.",
-    img: "images/alumniImages/ChandanSharmaPrji.jpg",
-  },
-  {
-    name: "Abhinandan Jain",
-    batch: "2016",
-    role: "State Bank of India",
-    quote: "Found peace through service",
-    testimonial:
-      "Dhirah gave me a fresh perspective on life. The values I imbibed here shaped my personality and helped me remain peaceful and purposeful even amidst corporate chaos.",
-    img: "images/alumniImages/AbhinandanaPrji.jpg",
-  },
-  {
-    name: "Kshitij Kansal",
-    batch: "2016",
-    role: "INDIAN OIL CORPORATION LIMITED",
-    quote: "Inner light awakened gently",
-    testimonial:
-      "The wisdom I gained from Dhirah continues to guide me in both my spiritual and professional journey. It helped me grow not just as an employee, but as a human being.",
-    img: "images/alumniImages/KshitijkansalPrji.jpg",
-  },
-  {
     name: "Abhinav Goswami",
     batch: "2025",
     role: "Astrotalk",
@@ -143,6 +116,33 @@ const alumniData = [
     testimonial:
       "Dhirah gave me more than a spiritual foundation—it gave me clarity, resilience, and a heart full of gratitude. The impact of this society still reflects in how I deal with people and life today.",
     img: "images/alumniImages/ManshuTutejaPrji.jpg",
+  },
+  {
+    name: "Chandan Sharma",
+    batch: "2020",
+    role: "Physicswallah",
+    quote: "Guided by discipline",
+    testimonial:
+      "Dhirah had been an integral part of my family. The amount of selfless love and care I received is really fascinating but not only that I got opportunity to learn and meet exciting personalities. \nDhirah gave me a platform to learn and share the wisdom of bhagavad gita. It gave me a boost in self confidence and simultaneously I discovered the areas of improvement.",
+    img: "images/alumniImages/ChandanSharmaPrji.jpg",
+  },
+  {
+    name: "Abhinandan Jain",
+    batch: "2016",
+    role: "State Bank of India",
+    quote: "Found peace through service",
+    testimonial:
+      "Dhirah gave me a fresh perspective on life. The values I imbibed here shaped my personality and helped me remain peaceful and purposeful even amidst corporate chaos.",
+    img: "images/alumniImages/AbhinandanaPrji.jpg",
+  },
+  {
+    name: "Kshitij Kansal",
+    batch: "2016",
+    role: "INDIAN OIL CORPORATION LIMITED",
+    quote: "Inner light awakened gently",
+    testimonial:
+      "The wisdom I gained from Dhirah continues to guide me in both my spiritual and professional journey. It helped me grow not just as an employee, but as a human being.",
+    img: "images/alumniImages/KshitijkansalPrji.jpg",
   },
   {
     name: "Sachin Tiwari",
