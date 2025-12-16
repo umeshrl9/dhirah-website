@@ -1,0 +1,26 @@
+.carousel-item{
+    height: 32rem;
+}
+
+.dyh-founder-section {
+  background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+}
+
+.founder-img-box {
+  width: 220px;
+  aspect-ratio: 1 / 1;   /* forces square */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.founder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.3) translateX(15px);
+}
+
+.dyh-founder-section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
