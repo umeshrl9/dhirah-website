@@ -41,3 +41,145 @@ html, body {
   background-color: #ffc600;
   color: #1c1c1c;
 }
+
+/* Feature Card Hover Effects */
+.dyh-features-section .feature {
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+  cursor: default;
+}
+
+/* Card lift + glow */
+.dyh-features-section .feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.12);
+  background-color: #fffdf4; /* soft warm tint */
+}
+
+/* Icon animation */
+.dyh-features-section .feature-icon {
+  transition: 
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.dyh-features-section .feature:hover .feature-icon {
+  transform: scale(1.1) rotate(-3deg);
+  box-shadow: 0 0.75rem 1.5rem rgba(255, 198, 0, 0.45);
+}
+
+/* Heading color shift */
+.dyh-features-section .feature h3 {
+  transition: color 0.3s ease;
+}
+
+.dyh-features-section .feature:hover h3 {
+  color: #1c1c1c;
+}
+
+/* Paragraph clarity on hover */
+.dyh-features-section .feature p {
+  transition: color 0.3s ease;
+}
+
+.dyh-features-section .feature:hover p {
+  color: #333;
+}
+
+
+.dyh-features-section .feature:hover{
+  cursor: pointer;
+}
+
+.dyh-difference-section {
+  background-color: #fdf8e6;
+}
+
+/* Icons */
+.dyh-diff-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #ffc600;
+  color: #1c1c1c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on row */
+.dyh-diff-item {
+  transition: transform 0.3s ease;
+}
+
+.dyh-diff-item:hover {
+  transform: translateX(6px);
+}
+
+.dyh-diff-item:hover .dyh-diff-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0.75rem 1.5rem rgba(255, 198, 0, 0.45);
+}
+
+/* Right side visual */
+.dyh-diff-visual {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1.1;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, #fff6cc, #ffe28a);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.08);
+}
+
+/* Contact Section – same as Founder */
+.dyh-contact-section {
+  background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* Contact Cards */
+.dyh-contact-card {
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.06),
+    rgba(0, 0, 0, 0.6)
+  );
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover effect */
+.dyh-contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* Icon */
+.dyh-contact-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  background-color: rgba(255, 198, 0, 0.12);
+  color: #ffc600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icon hover */
+.dyh-contact-card:hover .dyh-contact-icon {
+  transform: scale(1.15);
+  box-shadow: 0 0 1.5rem rgba(255, 198, 0, 0.5);
+}
+
