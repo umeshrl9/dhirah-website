@@ -168,7 +168,7 @@ html, body {
   height: 64px;
   margin: 0 auto;
   background-color: rgba(255, 198, 0, 0.12);
-  color: #ffc600;
+  color: #59ccdd;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -180,6 +180,6 @@ html, body {
 /* Icon hover */
 .dyh-contact-card:hover .dyh-contact-icon {
   transform: scale(1.15);
-  box-shadow: 0 0 1.5rem rgba(255, 198, 0, 0.5);
+  box-shadow: 0 0 1.5rem rgba(0, 140, 255, 0.5);
 }
 
