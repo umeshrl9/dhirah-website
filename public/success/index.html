@@ -76,12 +76,20 @@
       alt="Main Image"
       class="img-fluid"
     />
-    <main class="reveal-on-scroll">
-      <h1 class="mx-4 my-5 not-found-heading">
-        Your response has been successfully recorded! :)
-      </h1>
-      <a href="/" class="mx-4 btn btn-warning success-a">Go back to home!</a>
-    </main>
+   <main class="reveal-on-scroll">
+  <div class="mx-4 my-5 d-flex flex-wrap align-items-center gap-3">
+    <h1 class="not-found-heading mb-0">
+      Your response has been successfully recorded! :)
+    </h1>
+
+    <div id="college-action"></div>
+
+    <a href="/" class="btn btn-warning success-a mt-3">
+      Go back to home!
+    </a>
+  </div>
+</main>
+
 
     <footer class="text-center text-white fw-bold py-4 mt-5 footer-custom">
       <div class="container">
@@ -122,6 +130,25 @@
         <p class="mb-0">&copy; <span id="yearFooter"></span> Dhirah</p>
       </div>
     </footer>
+
+    <script>
+  const params = new URLSearchParams(window.location.search);
+  const college = params.get("college");
+
+  const container = document.getElementById("college-action");
+
+  if (college === "GTB4CEC") {
+    container.innerHTML = `
+      <a
+        href="https://chat.whatsapp.com/G1Hs2GiZOApDFpgr8w4uo1"
+        target="_blank"
+        class="btn btn-success fw-bold mt-3"
+      >
+        <i class="bi bi-whatsapp"></i> Join GTB4CEC WhatsApp Group
+      </a>
+    `;
+  }
+</script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"

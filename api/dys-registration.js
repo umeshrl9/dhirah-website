@@ -36,7 +36,7 @@ const DYSRegistrationSchema = new mongoose.Schema({
   phone: String,
   college: {
     type: String,
-    enum: ["NSUT", "DDUC", "ARSD", "IIT Roorkee", "IIT Delhi", "GTBIT", "RLA", "Bhaskaracharya", "Aryabhatta", "VMMC"],
+    enum: ["NSUT", "DDUC", "ARSD", "IIT Roorkee", "IIT Delhi", "GTB4CEC", "RLA", "Bhaskaracharya", "Aryabhatta", "VMMC"],
   },
   h_ds: {
     type: String,
@@ -67,7 +67,7 @@ export default async function handler(req, res) {
 
       await newRegistration.save();
 
-      res.writeHead(302, { Location: "/success" });
+      res.writeHead(302, { Location: `/success?college=${encodeURIComponent(college)}` });
       res.end();
     } catch (error) {
       console.error(error);
