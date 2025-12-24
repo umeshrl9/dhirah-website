@@ -36,7 +36,7 @@ const UserSchema = new mongoose.Schema({
   phone: String,
   college: {
     type: String,
-    enum: ["NSUT", "DDUC", "ARSD", "IIT Roorkee", "IIT Delhi", "RLA", "Bhaskaracharya", "Aryabhatta", "VMMC"],
+    enum: ["NSUT", "DDUC", "ARSD", "IIT Roorkee", "IIT Delhi", "GTBIT", "RLA", "Bhaskaracharya", "Aryabhatta", "VMMC"],
   },
   whydhirah: String,
   viewOnBG: String,
