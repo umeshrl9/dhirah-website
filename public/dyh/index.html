@@ -161,15 +161,9 @@
 
             <!-- Logo -->
             <a href="/" class="flex items-center">
-                <img src="/images/logos/dhirah-logo-main.png" class="h-[65px] object-contain" alt="Dhirah Logo">
-            </a>
+                <img src="/images/logos/dhirah-logo-main.png" class="h-12 sm:h-[65px] w-auto object-contain"
+                    alt="Dhirah Logo"></a>
 
-            <!-- Hamburger -->
-            <button id="menu-btn" class="md:hidden text-white self-end">
-                <svg class="w-8 h-8" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
             <div>
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex gap-6 text-[22.5px] font-bold text-[#5e5e5e] z-10">
@@ -179,6 +173,14 @@
                     <li><a href="/register" class="hover:text-yellow-400 transition">Register</a></li>
                 </ul>
             </div>
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden text-white ml-auto">
+                <svg class="w-8 h-8" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
         </div>
 
         <!-- Mobile Dropdown INSIDE NAV -->
@@ -287,27 +289,32 @@
                     class="md:col-span-4 bento-item reveal bg-[#0A0A0A] border border-white/5 rounded-[2.5rem] p-10 group">
                     <div
                         class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 00-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="7" y="3" width="10" height="18" rx="2" />
+                            <line x1="7" y1="12" x2="17" y2="12" />
+                            <line x1="9" y1="7" x2="9" y2="9" />
+                            <line x1="9" y1="15" x2="9" y2="17" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Pure RO System</h3>
-                    <p class="text-gray-500 text-sm">Medical-grade multi-stage purification. Fuel for your intellect.
-                    </p>
+                    <h3 class="text-2xl font-bold mb-3">Refrigeration</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-md">Reliable refrigeration systems that keep
+                        things cool, efficient, and consistent.</p>
                 </div>
 
                 <div
                     class="md:col-span-4 bento-item reveal bg-[#0A0A0A] border border-white/5 rounded-[2.5rem] p-10 group">
                     <div
                         class="w-14 h-14 bg-cyan-500/10 text-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-45 transition-transform">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="3" y="6" width="18" height="6" rx="2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 16c0 2-2 2-2 4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 16c0 2-2 2-2 4" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 16c0 2-2 2-2 4" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Climate Control</h3>
-                    <p class="text-gray-500 text-sm">Full AC in all units. Keep your cool when pressure rises.</p>
+                    <h3 class="text-2xl font-bold mb-3">Full Air Conditioning</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-md">Full AC in all units. Keep your cool when
+                        pressure rises.</p>
                 </div>
 
                 <div
@@ -321,21 +328,25 @@
            M12 20h.01" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-3">Gigabit WiFi</h3>
-                    <p class="text-gray-500 text-sm">Zero-lag connectivity for research, gaming, and collaboration.</p>
+                    <h3 class="text-2xl font-bold mb-3">High Speed WiFi</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-md">Zero-lag connectivity for research,
+                        studies, and collaboration.</p>
                 </div>
 
                 <div
                     class="md:col-span-4 bento-item reveal bg-[#0A0A0A] border border-white/5 rounded-[2.5rem] p-10 group">
                     <div
                         class="w-14 h-14 bg-indigo-500/10 text-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:-rotate-12 transition-transform">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="4" y="3" width="16" height="18" rx="2" />
+                            <circle cx="12" cy="13" r="4" />
+                            <circle cx="8" cy="7" r="1" />
+                            <circle cx="11" cy="7" r="1" />
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Washing Machine</h3>
-                    <p class="text-gray-500 text-sm">Professional care ensuring your wardrobe is sharp.</p>
+                    <p class="text-gray-400 text-lg leading-relaxed max-w-md">Professional care ensuring your wardrobe
+                        is sharp.</p>
                 </div>
             </div>
         </div>
@@ -364,9 +375,9 @@
                                 d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 italic serif-italic">Career Ops</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Direct access to CV clinics and Tier-1 firm alumni
-                        networking events. Build your future today.</p>
+                    <h3 class="text-2xl font-bold mb-4 italic serif-italic"> Career Hub</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed">CV guidance and alumni networking to help you move
+                        toward top careers.</p>
                 </div>
 
                 <!-- Health Hub -->
@@ -379,9 +390,9 @@
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 italic serif-italic">Health Sanctuary</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">24/7 medical monitoring and on-call assistance.
-                        Peak health equals peak academic performance.</p>
+                    <h3 class="text-2xl font-bold mb-4 italic serif-italic">Health Care</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed">On demand medical monitoring and support to keep
+                        you at your best.</p>
                 </div>
 
                 <!-- Elite Circle -->
@@ -395,7 +406,7 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 italic serif-italic">Elite Circle</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Selective entry ensures you live with driven peers.
+                    <p class="text-gray-500 text-lg leading-relaxed">Selective entry ensures you live with driven peers.
                         Iron sharpens iron in this curated community.</p>
                 </div>
 
@@ -409,7 +420,7 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 italic serif-italic">Personal Care</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">The founder is directly involved in hygiene, food
+                    <p class="text-gray-500 text-lg leading-relaxed">The founder is directly involved in hygiene, food
                         quality, and overall well-being. Frictionless living managed at the highest level.</p>
                 </div>
 
@@ -425,7 +436,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4 italic serif-italic text-balance">Simple Living, High Thinking
                     </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Focusing on what matters. A clutter-free,
+                    <p class="text-gray-500 text-lg leading-relaxed">Focusing on what matters. A clutter-free,
                         intentional environment that encourages profound intellectual depth and clarity.</p>
                 </div>
 
@@ -440,7 +451,7 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 italic serif-italic">Family Environment</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">We aren’t a commercial space. We are a brotherhood
+                    <p class="text-gray-500 text-lg leading-relaxed">We aren’t a commercial space. We are a brotherhood
                         that eats, studies, and grows together. True communal support.</p>
                 </div>
             </div>
@@ -546,7 +557,6 @@
                                 <button onclick="nextTestimonial()"
                                     class="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all">→</button>
                             </div>
-                            <span class="text-[10px] font-bold tracking-[0.3em] text-gray-500">VOICE SELECTOR</span>
                         </div>
                     </div>
                 </div>
@@ -560,12 +570,12 @@
 
             <!-- Heading -->
             <div class="text-center mb-20 reveal">
-                <span class="text-orange-500 font-bold tracking-[0.4em] uppercase text-xs mb-4 block">
-                    Student Life
+                <span class="font-bold tracking-[0.4em] uppercase text-xs mb-4 block">
+                    Student Life Inside
                 </span>
 
                 <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6">
-                    Inside <span class="serif-italic italic text-orange-500">Dhirah</span>
+                    <span class="serif-italic italic text-orange-500">Dhirah Youth Hostel</span>
                 </h2>
 
                 <p class="text-gray-500 text-lg max-w-2xl mx-auto">
@@ -629,74 +639,60 @@
 
 
     <!-- Let's Talk -->
-    <section
-        class="relative pt-[70px] pb-[70px] flex items-center justify-center bg-[linear-gradient(135deg,#1c1c1c,#2b2b2b)] text-white overflow-hidden px-6">
+    <section class="py-32 px-6 bg-[#050505] border-y border-white/5">
 
-        <div class="relative max-w-6xl w-full text-center">
+        <div class="max-w-6xl mx-auto text-center">
 
             <!-- Heading -->
-            <h2 class="text-3xl md:text-3xl font-bold mb-3">
-                Let's <span class="text-cyan-400">Talk</span>
+            <span class="text-orange-500 font-bold tracking-[0.4em] uppercase text-xs mb-4 block">
+                Get In Touch
+            </span>
+
+            <h2 class="serif-italic italic text-5xl md:text-6xl font-black tracking-tight mb-6">
+                Let's <span class="serif-italic italic text-orange-200">Talk</span>
             </h2>
 
-            <p class="text-lg text-gray-300 mx-auto mb-16">
-                Interested in joining the DYH family? Reach out to us directly via call
-                or email. We’d love to answer your questions and welcome you.
+            <p class="text-gray-500 text-xl max-w-xl mx-auto mb-20">
+                Interested in joining the Dhirah family? Reach out directly.
+                We're happy to answer your questions.
             </p>
 
             <!-- Cards -->
-            <div class="flex justify-center max-[724px]:flex-col gap-5 mb-8">
+            <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
 
-                <!-- Call Card -->
-                <div class="group relative rounded-4xl px-28 py-6  max-[936px]:px-16 max-[806px]:px-12 max-[806px]:py-5
-                bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0.4))]
-                transition-all duration-300 ease-in-out
-                hover:-translate-y-3 hover:shadow-[0_1.5rem_3rem_rgba(0,0,0,0.6)]
-                cursor-pointer drop-shadow-2xl drop-shadow-black">
+                <!-- Call -->
+                <div
+                    class="group p-10 rounded-[3rem] bg-[#0A0A0A] border border-white/5 hover:border-orange-500/40 transition-all shadow-xl">
 
-                    <!-- Icon -->
-                    <div class="w-20 h-20 mx-auto mb-8
-                    bg-[rgba(255,198,0,0.12)] text-[#ffc600]
-                    rounded-full flex items-center justify-center text-3xl
-                    transition-all duration-300
-                    group-hover:scale-110
-                    group-hover:shadow-[0_0_1.5rem_rgba(255,198,0,0.5)]">
-                        <i class="bi bi-telephone-fill"></i>
+                    <div
+                        class="w-16 h-16 bg-orange-500/10 text-orange-500 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:rotate-12 transition-transform">
+                        <i class="bi bi-telephone-fill text-xl"></i>
                     </div>
 
-                    <p class="uppercase tracking-widest text-gray-400 text-sm mb-4">
+                    <p class="uppercase tracking-widest text-gray-500 text-xs mb-3">
                         Call Us Anytime
                     </p>
 
-                    <h4 class="text-2xl font-semibold">
+                    <h4 class="text-2xl font-bold">
                         +91 98765 43210
                     </h4>
 
                 </div>
 
+                <!-- Email -->
+                <div
+                    class="group p-10 rounded-[3rem] bg-[#0A0A0A] border border-white/5 hover:border-orange-500/40 transition-all shadow-xl">
 
-                <!-- Email Card -->
-                <div class="group relative rounded-4xl px-28 py-6 max-[936px]:px-16  max-[806px]:px-12 max-[806px]:py-5
-                bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),rgba(0,0,0,0.4))]
-                transition-all duration-300 ease-in-out
-                hover:-translate-y-3 hover:shadow-[0_1.5rem_3rem_rgba(0,0,0,0.6)]
-                cursor-pointer drop-shadow-2xl drop-shadow-black">
-
-                    <!-- Icon -->
-                    <div class="w-20 h-20 mx-auto mb-8
-                    bg-[rgba(255,198,0,0.12)] text-[#ffc600]
-                    rounded-full flex items-center justify-center text-3xl
-                    transition-all duration-300
-                    group-hover:scale-110
-                    group-hover:shadow-[0_0_1.5rem_rgba(255,198,0,0.5)]">
-                        <i class="bi bi-envelope-fill"></i>
+                    <div
+                        class="w-16 h-16 bg-orange-500/10 text-orange-500 rounded-2xl flex items-center justify-center mb-8 mx-auto group-hover:-rotate-12 transition-transform">
+                        <i class="bi bi-envelope-fill text-xl"></i>
                     </div>
 
-                    <p class="uppercase tracking-widest text-gray-400 text-sm mb-4">
+                    <p class="uppercase tracking-widest text-gray-500 text-xs mb-3">
                         Email Inquiries
                     </p>
 
-                    <h4 class="text-2xl font-semibold">
+                    <h4 class="text-2xl font-bold">
                         hello@dhirah.org
                     </h4>
 
@@ -708,8 +704,10 @@
 
     </section>
 
-    <!-- Footer -->
 
+
+
+    <!-- Footer -->
     <footer class="bg-black text-white  text-center py-8">
 
         <div class="max-w-6xl mx-auto px-4">
