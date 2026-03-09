@@ -317,6 +317,8 @@ const alumniData = [
   },
 ];
 
+alumniData.sort((a, b) => parseInt(b.batch) - parseInt(a.batch));
+
 function renderAlumni(filter = "all") {
   const container = document.getElementById("alumniContainer");
   container.innerHTML = "";
