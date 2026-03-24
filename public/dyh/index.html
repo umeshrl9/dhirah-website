@@ -587,7 +587,7 @@
             <!-- Premium Bento Gallery -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-                <!-- Large Feature Image -->
+                <!-- Large Feature Image (col-span-2, row-span-2) -->
                 <div
                     class="col-span-2 row-span-2 group relative overflow-hidden rounded-3xl border border-white/5 reveal">
                     <img src="../images/dyh-assets/studying-1.jpeg"
@@ -606,27 +606,28 @@
                         class="w-full aspect-square object-cover transition duration-700 group-hover:scale-105">
                 </div>
 
-                <!-- Wide -->
+                <!-- Wide (fills cols 3–4 in row 2) -->
                 <div class="col-span-2 group relative overflow-hidden rounded-3xl border border-white/5 reveal">
                     <img src="../images/dyh-assets/kitchen.png"
                         class="w-full aspect-[16/9] object-cover transition duration-700 group-hover:scale-105">
                 </div>
 
+                <!-- Row 3: Small → Wide → Small (reordered, no order-* needed) -->
+
                 <!-- Small -->
-                <div class="order-1 md:order-1 group relative overflow-hidden rounded-3xl border border-white/5 reveal">
+                <div class="group relative overflow-hidden rounded-3xl border border-white/5 reveal">
                     <img src="../images/dyh-assets/studying-2.jpeg"
                         class="w-full aspect-square object-cover transition duration-700 group-hover:scale-105">
                 </div>
 
                 <!-- Wide -->
-                <div
-                    class="order-3 md:order-2 col-span-2 group relative overflow-hidden rounded-3xl border border-white/5 reveal">
+                <div class="col-span-2 group relative overflow-hidden rounded-3xl border border-white/5 reveal">
                     <img src="../images/dyh-assets/cooking.png"
                         class="w-full aspect-[16/9] object-cover transition duration-700 group-hover:scale-105">
                 </div>
 
                 <!-- Small -->
-                <div class="order-2 md:order-3 group relative overflow-hidden rounded-3xl border border-white/5 reveal">
+                <div class="group relative overflow-hidden rounded-3xl border border-white/5 reveal">
                     <img src="../images/dyh-assets/interaction.png"
                         class="w-full aspect-square object-cover transition duration-700 group-hover:scale-105">
                 </div>
