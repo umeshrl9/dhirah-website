@@ -67,7 +67,7 @@ export default async function handler(req, res) {
 
       await newRegistration.save();
 
-      res.writeHead(302, { Location: `/success?college=${encodeURIComponent(college)}` });
+      res.writeHead(302, { Location: `/success?college=${encodeURIComponent(college)}&h_ds=${encodeURIComponent(h_ds)}` });
       res.end();
     } catch (error) {
       console.error(error);
