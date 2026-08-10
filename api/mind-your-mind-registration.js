@@ -91,15 +91,19 @@ export default async function handler(req, res) {
     // Save registration to MongoDB
     const savedRegistration = await newRegistration.save();
 
-    
     const count = await MMDRegistration.countDocuments();
     // NSUT condition
     if (college === "NSUT") {
-      return res.redirect("/success?mmd=true&college=NSUT");
+      res.writeHead(302, {
+        Location: "/success?mmd=true&college=NSUT",
+      });
+      return res.end();
     }
 
-    // Non-NSUT students
-    return res.redirect("/success?mmd=true");
+    res.writeHead(302, {
+      Location: "/success?mmd=true",
+    });
+    return res.end();
   } catch (error) {
     console.error("MMD Registration Error:", error);
 
