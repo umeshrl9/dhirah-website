@@ -132,41 +132,65 @@
 
     <script>
       const params = new URLSearchParams(window.location.search);
+
       const college = params.get("college");
       const h_ds = params.get("h_ds");
+      const mmd = params.get("mmd");
 
       const container = document.getElementById("college-action");
 
-      if (college === "GTB4CEC") {
-        container.innerHTML = `
-      <a
-        href="https://chat.whatsapp.com/G1Hs2GiZOApDFpgr8w4uo1"
-        target="_blank"
-        class="btn btn-success fw-bold mt-3"
-      >
-        <i class="bi bi-whatsapp"></i> Join GTB4CEC WhatsApp Group
-      </a>
+      // ONLY for Mind Your Mind
+      if (mmd === "true") {
+        if (college === "NSUT") {
+          container.innerHTML = `
+      <div class="mt-3">
+
+        <a
+          href="https://chat.whatsapp.com/Ff62EwRm19C9mohUd5ob70?s=qt&p=a&ilr=4"
+          target="_blank"
+          class="btn btn-success fw-bold"
+        >
+          <i class="bi bi-whatsapp"></i>
+          Join Mind Your Mind WhatsApp Group
+        </a>
+      </div>
     `;
+        }
+
+        // EXISTING FORMS — UNCHANGED
+      } else if (college === "GTB4CEC") {
+        container.innerHTML = `
+    <a
+      href="https://chat.whatsapp.com/G1Hs2GiZOApDFpgr8w4uo1"
+      target="_blank"
+      class="btn btn-success fw-bold mt-3"
+    >
+      <i class="bi bi-whatsapp"></i>
+      Join GTB4CEC WhatsApp Group
+    </a>
+  `;
       } else if (college === "NSUT" && h_ds === "Hosteller") {
         container.innerHTML = `
-      <a
-        href="https://chat.whatsapp.com/B85whcRZPFZ6Y6tU45Y1gj?s=hd&p=i&ilr=0"
-        target="_blank"
-        class="btn btn-success fw-bold mt-3"
-      >
-        <i class="bi bi-whatsapp"></i> Join WhatsApp Group
-      </a>
-    `;
+    <a
+      href="https://chat.whatsapp.com/B85whcRZPFZ6Y6tU45Y1gj?s=hd&p=i&ilr=0"
+      target="_blank"
+      class="btn btn-success fw-bold mt-3"
+    >
+      <i class="bi bi-whatsapp"></i>
+      Join WhatsApp Group
+    </a>
+  `;
       } else if (college === "NSUT" && h_ds === "Day Scholar") {
         container.innerHTML = `
-      <a
-        href="https://chat.whatsapp.com/B85whcRZPFZ6Y6tU45Y1gj?s=hd&p=i&ilr=0"
-        target="_blank"
-        class="btn btn-success fw-bold mt-3"
-      >
-        <i class="bi bi-whatsapp"></i> Join WhatsApp Group
-      </a>
-    `;
+    <a
+      href="https://chat.whatsapp.com/B85whcRZPFZ6Y6tU45Y1gj?s=hd&p=i&ilr=0"
+      target="_blank"
+      class="btn btn-success fw-bold mt-3"
+    >
+      <i class="bi bi-whatsapp"></i>
+      Join WhatsApp Group
+    </a>
+  `;
       }
     </script>
 
