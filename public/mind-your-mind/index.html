@@ -3,415 +3,422 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dhirah: A Life Less Ordinary</title>
-    <link rel="icon" type="image/png" href="/images/logos/title-image.jpg" />
+
+    <title>Mind Your Mind | Dhirah</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/logos/title-image.jpg"
+    />
+
+    <!-- Existing site styles -->
     <link rel="stylesheet" href="/styles/recruitmentStyle.css" />
     <link rel="stylesheet" href="/styles/homeStyle.css" />
     <link rel="stylesheet" href="/styles/headerStyle.css" />
+    <link rel="stylesheet" href="/styles/footerStyle.css" />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/styles/footerStyle.css" />
+
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Liter&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=Liter&family=Playfair+Display:wght@500;600;700&family=Roboto:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
 
     <style>
-      /* =========================================
-     DATE INPUT
-     ========================================= */
-
-      /* Hide native calendar icon */
-      input[type="date"]::-webkit-calendar-picker-indicator {
-        opacity: 0;
-        cursor: pointer;
-        position: relative;
-        z-index: 2;
+      :root {
+        --accent: #ffc107;
+        --black: #000;
+        --input-bg: #1f2327;
+        --border: rgba(255, 255, 255, 0.18);
       }
+
+      /* =====================================================
+         GLOBAL
+      ===================================================== */
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: "IBM Plex Sans Condensed", sans-serif;
+      }
+
+      main {
+        margin: 0;
+        padding: 0;
+        background: #000;
+      }
+
+      /* =====================================================
+         NAVBAR
+      ===================================================== */
+
+      .navbar {
+        position: relative !important;
+        width: 100%;
+        z-index: 1000;
+
+        padding: 12px 18px;
+
+        background: #000 !important;
+      }
+
+      .navbar.scrolled {
+        background: #000 !important;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+      /* =====================================================
+         POSTER
+         
+         IMPORTANT:
+         Poster is completely separate from the form.
+      ===================================================== */
+
+      .mmd-poster-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        background: #000;
+
+        overflow: hidden;
+      }
+
+      .mmd-poster {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+
+        object-fit: contain;
+        object-position: center center;
+      }
+
+      /* =====================================================
+         REGISTRATION SECTION
+      ===================================================== */
+
+      .mmd-registration {
+        width: 100%;
+
+        margin: 0;
+        padding: 58px 24px 80px;
+
+        background: #000;
+      }
+
+      .mmd-registration-container {
+        width: min(1050px, 100%);
+        margin: 0 auto;
+      }
+
+      .mmd-heading {
+        margin: 0 0 44px;
+
+        color: #fff;
+
+        font-family: "Playfair Display", serif;
+        font-size: clamp(30px, 3vw, 42px);
+        font-weight: 600;
+        line-height: 1.15;
+
+        text-align: center;
+      }
+
+      /* =====================================================
+         FORM
+      ===================================================== */
+
+      #registration-form {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #registration-form .mb-3 {
+        margin-bottom: 28px !important;
+      }
+
+      #registration-form .form-label {
+        display: block;
+
+        margin-bottom: 9px;
+
+        color: #fff;
+
+        font-family: "IBM Plex Sans Condensed", sans-serif;
+        font-size: 17px;
+        font-weight: 600;
+      }
+
+      #registration-form .form-control,
+      #registration-form .form-select {
+        width: 100%;
+        height: 52px;
+        min-height: 52px;
+
+        box-sizing: border-box;
+
+        padding: 0 14px;
+
+        color: #fff;
+        background: var(--input-bg);
+
+        border: 1px solid var(--border);
+        border-radius: 7px;
+
+        box-shadow: none;
+
+        font-family: "IBM Plex Sans Condensed", sans-serif;
+        font-size: 17px;
+
+        transition:
+          border-color 0.18s ease,
+          background-color 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+
+      #registration-form .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      #registration-form .form-control:focus,
+      #registration-form .form-select:focus {
+        outline: none;
+
+        color: #fff;
+        background: #24282c;
+
+        border-color: rgba(255, 193, 7, 0.85);
+
+        box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+      }
+
+      #registration-form .form-select {
+        cursor: pointer;
+      }
+
+      #registration-form .form-select option {
+        background: #1f2327;
+        color: #fff;
+      }
+
+      /* =====================================================
+         DATE
+      ===================================================== */
 
       .date-wrapper {
         position: relative;
       }
 
+      .date-wrapper .form-control {
+        padding-right: 50px;
+      }
+
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+        cursor: pointer;
+      }
+
       .date-wrapper .bi-calendar {
         position: absolute;
-        top: 78%;
-        right: 15px;
-        transform: translateY(-50%);
+
+        right: 17px;
+        bottom: 16px;
+
+        color: rgba(255, 255, 255, 0.95);
+
+        font-size: 20px;
 
         pointer-events: none;
-
-        color: white;
-        font-size: 1rem;
-
-        z-index: 1;
       }
 
-      /* =========================================
-     MIND YOUR MIND — MAIN SECTION
-     Poster is a real <img>, full size, uncropped —
-     scoped to the middle content only (nav & footer
-     stay as they were).
-     ========================================= */
+      /* =====================================================
+         SUBMIT
+      ===================================================== */
 
-      .mmd-section {
-        position: relative;
-
-        width: 100%;
-        max-width: 900px;
-
-        margin: 20px auto;
-
-        border-radius: 8px;
-        overflow: hidden;
-
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
-
-        line-height: 0;
-      }
-
-      .mmd-poster-img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
-      /* =========================================
-     CONTENT — absolutely positioned ON the poster.
-     top/bottom % here correctly resolve against the
-     poster's HEIGHT (padding % would resolve against
-     width instead — that was an earlier bug).
-     Measured from the real poster file: title block
-     ends ~21% down, the date/phone/QR band starts
-     ~73% down.
-     ========================================= */
-
-      .mmd-content {
-        position: absolute;
-
-        top: 23%;
-        bottom: 26%;
-        left: 5%;
-        right: 5%;
-
-        z-index: 1;
-
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-      }
-
-      .mmd-content h1 {
-        display: none;
-      }
-
-      /* =========================================
-     FORM CONTAINER
-     ========================================= */
-
-      .mmd-form-card {
-        width: 100%;
-        max-width: 420px;
-        height: 100%;
-
-        overflow-y: auto;
-
-        padding: 20px 26px;
-
-        background: rgba(8, 8, 10, 0.78);
-
-        border: 1px solid rgba(255, 255, 255, 0.25);
-
-        border-radius: 12px;
-
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-
-        box-sizing: border-box;
-      }
-
-
-
-      /* =========================================
-     FORM LABELS
-     ========================================= */
-
-      .mmd-form-card .form-label {
+      .submit-btn {
         display: block;
 
-        margin-bottom: 7px;
+        width: auto;
+        min-width: 185px;
+        height: 52px;
 
-        color: #fff;
+        margin-top: 8px;
 
-        font-family: "IBM Plex Sans Condensed", sans-serif;
+        padding: 0 24px;
 
-        font-size: 16px;
+        color: #111;
+        background: var(--accent);
 
-        font-weight: 600;
-
-        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-      }
-
-      /* =========================================
-     INPUTS + SELECTS
-     ========================================= */
-
-      .mmd-form-card .form-control,
-      .mmd-form-card .form-select {
-        min-height: 46px;
-
-        background: rgba(10, 10, 10, 0.48);
-
-        border: 1px solid rgba(255, 255, 255, 0.3);
-
-        border-radius: 5px;
-
-        color: #fff;
+        border: none;
+        border-radius: 7px;
 
         font-family: "IBM Plex Sans Condensed", sans-serif;
-
-        font-size: 16px;
-
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-
-        transition:
-          border-color 0.2s ease,
-          background 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      /* =========================================
-     PLACEHOLDER
-     ========================================= */
-
-      .mmd-form-card .form-control::placeholder {
-        color: rgba(255, 255, 255, 0.62);
-      }
-
-      /* =========================================
-     SELECT
-     ========================================= */
-
-      .mmd-form-card .form-select {
-        color: rgba(255, 255, 255, 0.9);
-      }
-
-      /* Make dropdown options readable (native popup ignores parent bg) */
-      .mmd-form-card .form-select option {
-        color: #000;
-        background: #fff;
-      }
-
-      /* =========================================
-     INPUT FOCUS
-     ========================================= */
-
-      .mmd-form-card .form-control:focus,
-      .mmd-form-card .form-select:focus {
-        background: rgba(10, 10, 10, 0.68);
-
-        color: #fff;
-
-        border-color: #ffc107;
-
-        box-shadow:
-          0 0 0 2px rgba(255, 193, 7, 0.12),
-          0 5px 18px rgba(0, 0, 0, 0.25);
-      }
-
-      /* =========================================
-     FORM SPACING
-     ========================================= */
-
-      .mmd-form-card .mb-3 {
-        margin-bottom: 14px !important;
-      }
-
-      /* =========================================
-     SUBMIT BUTTON
-     ========================================= */
-
-      .mmd-form-card button[type="submit"] {
-        margin-top: 5px !important;
-
-        padding: 10px 20px;
-
-        border-radius: 5px;
-
-        font-family: "IBM Plex Sans Condensed", sans-serif;
-
-        font-size: 16px;
-
+        font-size: 17px;
         font-weight: 700;
 
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: none;
 
         transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
+          transform 0.16s ease,
+          filter 0.16s ease;
       }
 
-      .mmd-form-card button[type="submit"]:hover {
+      .submit-btn:hover {
         transform: translateY(-2px);
-
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        filter: brightness(1.05);
       }
 
-      /* =========================================
-     FORM SCROLL OFFSET
-     ========================================= */
-
-      #registration-form {
-        scroll-margin-top: 80px;
+      .submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
       }
 
-      /* =========================================
-     FLOATING REGISTER BUTTON
-     ========================================= */
+      /* =====================================================
+         FOOTER
+      ===================================================== */
 
-      .scroll-form-btn {
-        position: fixed;
+      footer.footer-custom {
+        margin: 0 !important;
+        padding: 42px 20px 34px !important;
 
-        right: 28px;
-        bottom: 28px;
+        background: #000 !important;
+      }
 
-        z-index: 1000;
-
-        display: flex;
-        align-items: center;
-
-        gap: 10px;
-
-        padding: 10px 16px;
-
-        border: 1px solid rgba(255, 193, 7, 0.7);
-
-        border-radius: 6px;
-
-        background: #ffc107;
-
-        color: #000;
-
-        font-family: "IBM Plex Sans Condensed", sans-serif;
-
-        font-weight: 600;
-
-        font-size: 15px;
-
-        cursor: pointer;
-
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+      .social-icon {
+        color: #fff !important;
+        text-decoration: none;
 
         transition:
-          transform 0.2s ease,
-          opacity 0.3s ease,
-          visibility 0.3s ease,
-          box-shadow 0.2s ease;
+          opacity 0.15s ease,
+          transform 0.15s ease;
       }
 
-      /* Floating button hover */
-
-      .scroll-form-btn:hover {
+      .social-icon:hover {
+        color: #fff !important;
+        opacity: 0.75;
         transform: translateY(-2px);
-
-        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.35);
       }
 
-      /* Arrow */
+      /* =====================================================
+         MOBILE
+      ===================================================== */
 
-      .scroll-form-btn i {
-        font-size: 16px;
+      @media (max-width: 600px) {
+        .navbar {
+          padding: 10px 14px;
+        }
 
-        animation: arrowBounce 1.5s infinite;
+        /*
+          Keep the entire poster proportional.
+          It is NOT used as a background.
+        */
+
+        .mmd-poster {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        .mmd-registration {
+          padding: 40px 16px 60px;
+        }
+
+        .mmd-heading {
+          margin-bottom: 32px;
+
+          font-size: 28px;
+          line-height: 1.2;
+        }
+
+        #registration-form .mb-3 {
+          margin-bottom: 22px !important;
+        }
+
+        #registration-form .form-label {
+          margin-bottom: 7px;
+          font-size: 15px;
+        }
+
+        #registration-form .form-control,
+        #registration-form .form-select {
+          height: 52px;
+          min-height: 52px;
+
+          font-size: 16px;
+        }
+
+        .submit-btn {
+          width: 100%;
+          height: 52px;
+
+          margin-top: 5px;
+
+          font-size: 16px;
+        }
+
+        footer.footer-custom {
+          padding: 32px 16px 28px !important;
+        }
       }
 
-      /* Arrow animation */
+      /* =====================================================
+         VERY SMALL PHONES
+      ===================================================== */
 
-      @keyframes arrowBounce {
-        0%,
-        100% {
-          transform: translateY(0);
+      @media (max-width: 380px) {
+        .mmd-registration {
+          padding-left: 13px;
+          padding-right: 13px;
         }
 
-        50% {
-          transform: translateY(3px);
-        }
-      }
-
-      /* Hide floating button when form is visible */
-
-      .scroll-form-btn.hidden {
-        opacity: 0;
-
-        visibility: hidden;
-
-        pointer-events: none;
-      }
-
-      /* =========================================
-     MOBILE
-     ========================================= */
-
-      @media (max-width: 576px) {
-        main {
-          padding: 65px 0 15px !important;
-        }
-
-        .mmd-section {
-          margin: 0 auto;
-          border-radius: 0;
-        }
-
-        .mmd-form-card {
-          padding: 16px 16px;
-
-          background: rgba(6, 6, 8, 0.82);
-
-          border-radius: 8px;
-        }
-
-        .mmd-form-card .form-control,
-        .mmd-form-card .form-select {
-          min-height: 38px;
-          font-size: 14px;
-        }
-
-        .mmd-form-card .form-label {
-          font-size: 14px;
-          margin-bottom: 4px;
-        }
-
-        .mmd-form-card .mb-3 {
-          margin-bottom: 10px !important;
-        }
-
-        .scroll-form-btn {
-          right: 15px;
-
-          bottom: 15px;
-
-          padding: 9px 13px;
-
-          font-size: 14px;
+        .mmd-heading {
+          font-size: 25px;
         }
       }
     </style>
   </head>
 
   <body>
+    <!-- ===================================================
+         NAVBAR
+    ==================================================== -->
+
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-fluid d-flex align-items-center">
+
           <a class="navbar-brand" href="/">
-            <img src="/images/logos/dhirah-logo-main.png" alt="Dhirah Logo" />
+            <img
+              src="/images/logos/dhirah-logo-main.png"
+              alt="Dhirah Logo"
+            />
           </a>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -424,46 +431,94 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarsExample01">
+          <div
+            class="collapse navbar-collapse"
+            id="navbarsExample01"
+          >
             <ul class="navbar-nav ms-auto mx-2">
+
               <li class="nav-item mx-1">
-                <a class="nav-link" href="/about-us">About Us</a>
+                <a class="nav-link" href="/about-us">
+                  About Us
+                </a>
               </li>
+
               <li class="nav-item mx-1">
-                <a class="nav-link" href="/what-we-do">What We Do</a>
+                <a class="nav-link" href="/what-we-do">
+                  What We Do
+                </a>
               </li>
+
               <li class="nav-item mx-1">
-                <a class="nav-link" href="/alumni">Our Alumni</a>
+                <a class="nav-link" href="/alumni">
+                  Our Alumni
+                </a>
               </li>
+
               <li class="nav-item mx-1">
-                <a class="nav-link" href="/register">Register</a>
+                <a class="nav-link" href="/register">
+                  Register
+                </a>
               </li>
+
             </ul>
           </div>
         </div>
       </nav>
     </header>
 
-    <main style="padding: 70px 12px 30px;">
-      <div class="mmd-section">
+    <!-- ===================================================
+         MAIN
+    ==================================================== -->
+
+    <main>
+
+      <!-- =================================================
+           MIND YOUR MIND POSTER
+           
+           THIS IS THE EXISTING CORRECT POSTER.
+      ================================================== -->
+
+      <section class="mmd-poster-section">
         <img
           src="/images/posters/mind-your-mind-poster.jpeg"
-          alt="Mind Your Mind — A Gita Perspective poster"
-          class="mmd-poster-img"
+          alt="Mind Your Mind — A Gita Perspective"
+          class="mmd-poster"
         />
-        <div class="mmd-content">
-          <div class="mmd-form-card">
-            <form
-              id="registration-form"
+      </section>
+
+      <!-- =================================================
+           REGISTRATION
+      ================================================== -->
+
+      <section class="mmd-registration">
+
+        <div class="mmd-registration-container">
+
+          <h1 class="mmd-heading">
+            Mind Your Mind
+          </h1>
+
+          <form
+            id="registration-form"
             action="/api/mind-your-mind-registration"
             method="POST"
             class="needs-validation"
             novalidate
           >
+
+            <!-- FULL NAME -->
+
             <div class="mb-3">
-              <label for="name" class="form-label"
-                >Full Name<span class="text-danger">*</span></label
+
+              <label
+                for="name"
+                class="form-label"
               >
+                Full Name
+                <span class="text-danger">*</span>
+              </label>
+
               <input
                 type="text"
                 class="form-control"
@@ -472,13 +527,25 @@
                 required
                 placeholder="Enter your name"
               />
-              <div class="invalid-feedback">Please enter your name.</div>
+
+              <div class="invalid-feedback">
+                Please enter your name.
+              </div>
+
             </div>
 
+            <!-- BRANCH -->
+
             <div class="mb-3">
-              <label for="branch" class="form-label"
-                >Branch <span class="text-danger">*</span></label
+
+              <label
+                for="branch"
+                class="form-label"
               >
+                Branch
+                <span class="text-danger">*</span>
+              </label>
+
               <input
                 type="text"
                 class="form-control"
@@ -487,13 +554,25 @@
                 required
                 placeholder="Enter your branch"
               />
-              <div class="invalid-feedback">Please enter your branch.</div>
+
+              <div class="invalid-feedback">
+                Please enter your branch.
+              </div>
+
             </div>
 
+            <!-- DATE OF BIRTH -->
+
             <div class="mb-3 date-wrapper">
-              <label for="dob" class="form-label"
-                >Date of Birth <span class="text-danger">*</span></label
+
+              <label
+                for="dob"
+                class="form-label"
               >
+                Date of Birth
+                <span class="text-danger">*</span>
+              </label>
+
               <input
                 type="date"
                 class="form-control"
@@ -501,39 +580,71 @@
                 name="dob"
                 required
               />
+
               <i class="bi bi-calendar"></i>
+
               <div class="invalid-feedback">
                 Please enter your date of birth.
               </div>
+
             </div>
 
+            <!-- YEAR OF STUDY -->
+
             <div class="mb-3">
-              <label for="year" class="form-label"
-                >Year of Study <span class="text-danger">*</span></label
+
+              <label
+                for="year"
+                class="form-label"
               >
-              <select class="form-select" id="year" name="year" required>
-                <option value="">Select your year</option>
+                Year of Study
+                <span class="text-danger">*</span>
+              </label>
+
+              <select
+                class="form-select"
+                id="year"
+                name="year"
+                required
+              >
+                <option value="">
+                  Select your year
+                </option>
+
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
               </select>
+
               <div class="invalid-feedback">
                 Please select your year of study.
               </div>
+
             </div>
 
+            <!-- COLLEGE -->
+
             <div class="mb-3">
-              <label for="college" class="form-label"
-                >College <span class="text-danger">*</span></label
+
+              <label
+                for="college"
+                class="form-label"
               >
+                College
+                <span class="text-danger">*</span>
+              </label>
+
               <select
                 class="form-select"
                 id="college"
                 name="college"
                 required
               >
-                <option value="">Select your college</option>
+                <option value="">
+                  Select your college
+                </option>
+
                 <option>NSUT</option>
                 <option>DDUC</option>
                 <option>ARSD</option>
@@ -544,13 +655,25 @@
                 <option>Aryabhatta</option>
                 <option>VMMC</option>
               </select>
-              <div class="invalid-feedback">Please select your college.</div>
+
+              <div class="invalid-feedback">
+                Please select your college.
+              </div>
+
             </div>
 
+            <!-- PHONE -->
+
             <div class="mb-3">
-              <label for="phone" class="form-label"
-                >Phone Number <span class="text-danger">*</span></label
+
+              <label
+                for="phone"
+                class="form-label"
               >
+                Phone Number
+                <span class="text-danger">*</span>
+              </label>
+
               <input
                 type="tel"
                 class="form-control"
@@ -560,36 +683,57 @@
                 pattern="[0-9]{10}"
                 placeholder="Enter your 10-digit phone number"
               />
+
               <div class="invalid-feedback">
                 Please enter a valid 10-digit phone number.
               </div>
+
             </div>
 
-            <button type="submit" class="btn btn-warning mt-3 fw-bold">
+            <!-- SUBMIT -->
+
+            <button
+              type="submit"
+              class="submit-btn"
+            >
               Submit Application
             </button>
+
           </form>
+
         </div>
-      </div>
-    </div>
+
+      </section>
+
     </main>
 
-    <footer class="text-center text-white fw-bold py-4 mt-5 footer-custom">
+    <!-- ===================================================
+         FOOTER
+    ==================================================== -->
+
+    <footer
+      class="text-center text-white fw-bold footer-custom"
+    >
       <div class="container">
-        <!-- Social Icons -->
-        <div class="mb-3 d-flex justify-content-center gap-4 py-3">
+
+        <div
+          class="mb-3 d-flex justify-content-center gap-4 py-3"
+        >
+
           <a
             href="https://www.instagram.com/dhirah_nsut/"
             class="fs-3 social-icon"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="bi bi-instagram"></i>
           </a>
 
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=dhirah.edu@gmail.com"
-            target="_blank"
             class="fs-3 social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="bi bi-google"></i>
           </a>
@@ -597,6 +741,8 @@
           <a
             href="https://www.youtube.com/@Dhirahlegacy"
             class="fs-3 social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="bi bi-youtube"></i>
           </a>
@@ -604,24 +750,37 @@
           <a
             href="https://www.linkedin.com/company/dhirah-du/"
             class="fs-3 social-icon"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i class="bi bi-linkedin"></i>
           </a>
+
         </div>
 
-        <!-- Copyright -->
-        <p class="mb-0">&copy; <span id="yearFooter"></span> Dhirah</p>
+        <p class="mb-0">
+          &copy;
+          <span id="yearFooter"></span>
+          Dhirah
+        </p>
+
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
+    <!-- ===================================================
+         BOOTSTRAP JS
+    ==================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ===================================================
+         NAVBAR SCROLL
+    ==================================================== -->
+
     <script>
       window.addEventListener("scroll", function () {
-        const navbar = document.querySelector("nav");
+        const navbar = document.querySelector(".navbar");
+
         if (window.scrollY > 50) {
           navbar.classList.add("scrolled");
         } else {
@@ -629,26 +788,45 @@
         }
       });
     </script>
+
+    <!-- ===================================================
+         FORM VALIDATION
+    ==================================================== -->
+
     <script>
-      const form = document.querySelector("form");
-      const submitBtn = form.querySelector("button[type='submit']");
+      const form = document.querySelector("#registration-form");
+      const submitBtn = form.querySelector(
+        "button[type='submit']"
+      );
 
       form.addEventListener("submit", (e) => {
         if (!form.checkValidity()) {
           e.preventDefault();
           e.stopPropagation();
+
           form.classList.add("was-validated");
+
           return;
         }
-        // Disable the submit button to prevent multiple clicks
+
         submitBtn.disabled = true;
         submitBtn.innerText = "Submitting...";
       });
     </script>
+
+    <!-- ===================================================
+         EXISTING SITE SCRIPT
+    ==================================================== -->
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="/script.js"></script>
+
+    <!-- FOOTER YEAR -->
+
     <script>
-      document.getElementById("yearFooter").textContent = new Date().getFullYear();
+      document.getElementById("yearFooter").textContent =
+        new Date().getFullYear();
     </script>
+
   </body>
 </html>
