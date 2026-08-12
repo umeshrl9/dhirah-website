@@ -95,13 +95,13 @@ export default async function handler(req, res) {
     // NSUT condition
     if (college === "NSUT") {
       res.writeHead(302, {
-        Location: "/success?mmd=true&college=NSUT",
+        Location: "/success?form-type=mind-your-mind&college=NSUT",
       });
       return res.end();
     }
 
     res.writeHead(302, {
-      Location: "/success?mmd=true",
+      Location: "/success?form-type=mind-your-mind",
     });
     return res.end();
   } catch (error) {

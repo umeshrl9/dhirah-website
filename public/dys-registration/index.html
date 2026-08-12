@@ -169,6 +169,13 @@
               </div>
             </div>
 
+            <!-- Room Number Container (Optional, hidden by default) -->
+            <div class="mb-3 d-none" id="roomNoContainer">
+              <label for="room_no" class="form-label">Room Number</label>
+              <input type="text" class="form-control" id="room_no" name="room_no"
+                placeholder="Enter your room number" />
+            </div>
+
             <button type="submit" class="btn btn-warning mt-3 fw-bold">
               Submit Application
             </button>
@@ -221,6 +228,19 @@
   <script>
     const form = document.querySelector("form");
     const submitBtn = form.querySelector("button[type='submit']");
+    const hDsSelect = document.getElementById("h_ds");
+    const roomNoContainer = document.getElementById("roomNoContainer");
+    const roomNoInput = document.getElementById("room_no");
+
+    // Toggle room_no input display based on Hosteller/Day Scholar selection
+    hDsSelect.addEventListener("change", function () {
+      if (this.value === "Hosteller") {
+        roomNoContainer.classList.remove("d-none");
+      } else {
+        roomNoContainer.classList.add("d-none");
+        roomNoInput.value = ""; // Clear input if hidden
+      }
+    });
 
     form.addEventListener("submit", (e) => {
       if (!form.checkValidity()) {

@@ -42,6 +42,7 @@ const DYSRegistrationSchema = new mongoose.Schema({
     type: String,
     enum: ["Hosteller", "Day Scholar"],
   },
+  room_no: String
 });
 
 const DYSRegistration = mongoose.models.DYSRegistration || mongoose.model("DYSRegistration", DYSRegistrationSchema);
@@ -52,7 +53,7 @@ export default async function handler(req, res) {
 
     if (req.method === "POST") {
     try {
-      const { name, rollno, year, branch, dob, phone, college, h_ds } = req.body;
+      const { name, rollno, year, branch, dob, phone, college, h_ds, room_no } = req.body;
 
       const newRegistration = new DYSRegistration({
         name,
@@ -62,12 +63,13 @@ export default async function handler(req, res) {
         dob,
         phone,
         college,
-        h_ds
+        h_ds,
+        room_no
       });
 
       await newRegistration.save();
 
-      res.writeHead(302, { Location: `/success?college=${encodeURIComponent(college)}&h_ds=${encodeURIComponent(h_ds)}` });
+      res.writeHead(302, { Location: `/success?form-type=dys-registration&college=${encodeURIComponent(college)}&h_ds=${encodeURIComponent(h_ds)}` });
       res.end();
     } catch (error) {
       console.error(error);
