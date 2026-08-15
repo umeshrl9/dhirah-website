@@ -101,7 +101,7 @@ export default async function handler(req, res) {
     }
 
     res.writeHead(302, {
-      Location: "/success?form-type=mind-your-mind",
+      Location: "/success?form-type=mind-your-mind&college=NSUT",
     });
     return res.end();
   } catch (error) {
