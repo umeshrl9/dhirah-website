@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-dotenv.config();
 
+dotenv.config();
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -10,6 +10,7 @@ if (!MONGODB_URI) {
 }
 
 let cached = global.mongoose;
+
 if (!cached) {
   cached = global.mongoose = { conn: null, promise: null };
 }
@@ -20,8 +21,11 @@ async function dbConnect() {
   }
 
   if (!cached.promise) {
-    cached.promise = mongoose.connect(MONGODB_URI).then(mongoose => mongoose);
+    cached.promise = mongoose
+      .connect(MONGODB_URI)
+      .then((mongoose) => mongoose);
   }
+
   cached.conn = await cached.promise;
   return cached.conn;
 }
@@ -30,35 +34,35 @@ async function dbConnect() {
 const UserSchema = new mongoose.Schema({
   name: String,
   rollno: String,
-  year: Number,
-  branch: String,
-  dob: String,
   phone: String,
   college: {
     type: String,
-    enum: ["NSUT", "DDUC", "ARSD", "IIT Roorkee", "IIT Delhi", "GTB4CEC", "RLA", "Bhaskaracharya", "Aryabhatta", "VMMC"],
+    default: "NSUT",
   },
   whydhirah: String,
   viewOnBG: String,
 });
 
-const User = mongoose.models.User || mongoose.model("User", UserSchema);
+const User = mongoose.models.User || mongoose.model("User", UserSchema, "recruitment26");
 
 export default async function handler(req, res) {
   await dbConnect();
 
   if (req.method === "POST") {
     try {
-      const { name, rollno, year, branch, dob, phone, college, whydhirah, viewOnBG } = req.body;
+      const {
+        name,
+        rollno,
+        phone,
+        whydhirah,
+        viewOnBG
+      } = req.body;
 
       const newUser = new User({
         name,
         rollno,
-        year,
-        branch,
-        dob,
         phone,
-        college,
+        college: "NSUT",
         whydhirah,
         viewOnBG,
       });
