@@ -34,6 +34,7 @@ async function dbConnect() {
 const UserSchema = new mongoose.Schema({
   name: String,
   rollno: String,
+  dob: String,
   phone: String,
   college: {
     type: String,
@@ -43,7 +44,9 @@ const UserSchema = new mongoose.Schema({
   viewOnBG: String,
 });
 
-const User = mongoose.models.User || mongoose.model("User", UserSchema, "recruitment26");
+const User =
+  mongoose.models.User ||
+  mongoose.model("User", UserSchema, "recruitment26");
 
 export default async function handler(req, res) {
   await dbConnect();
@@ -53,14 +56,16 @@ export default async function handler(req, res) {
       const {
         name,
         rollno,
+        dob,
         phone,
         whydhirah,
-        viewOnBG
+        viewOnBG,
       } = req.body;
 
       const newUser = new User({
         name,
         rollno,
+        dob,
         phone,
         college: "NSUT",
         whydhirah,
