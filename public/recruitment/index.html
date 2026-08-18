@@ -135,78 +135,8 @@
                 </div>
               </div>
 
-              <div class="mb-3">
-                <label for="branch" class="form-label"
-                  >Branch <span class="text-danger">*</span></label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="branch"
-                  name="branch"
-                  required
-                  placeholder="Enter your branch"
-                />
-                <div class="invalid-feedback">Please enter your branch.</div>
-              </div>
 
-              <div class="mb-3 date-wrapper">
-                <label for="dob" class="form-label"
-                  >Date of Birth <span class="text-danger">*</span></label
-                >
-                <input
-                  type="date"
-                  class="form-control"
-                  id="dob"
-                  name="dob"
-                  required
-                />
-                <i class="bi bi-calendar"></i>
-                <div class="invalid-feedback">
-                  Please enter your date of birth.
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="year" class="form-label"
-                  >Year of Study <span class="text-danger">*</span></label
-                >
-                <select class="form-select" id="year" name="year" required>
-                  <option value="">Select your year</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select your year of study.
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="college" class="form-label"
-                  >College <span class="text-danger">*</span></label
-                >
-                <select
-                  class="form-select"
-                  id="college"
-                  name="college"
-                  required
-                >
-                  <option value="">Select your college</option>
-                  <option>NSUT</option>
-                  <option>DDUC</option>
-                  <option>ARSD</option>
-                  <option>IIT Roorkee</option>
-                  <option>IIT Delhi</option>
-                  <option>GTB4CEC</option>
-                  <option>RLA</option>
-                  <option>Bhaskaracharya</option>
-                  <option>Aryabhatta</option>
-                  <option>VMMC</option>
-                </select>
-                <div class="invalid-feedback">Please select your college.</div>
-              </div>
+              <input type="hidden" id="college" name="college" value="NSUT" />
 
               <div class="mb-3">
                 <label for="phone" class="form-label"
